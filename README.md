@@ -41,7 +41,9 @@ sudo make install
 ```
 - get currently installed kernels in grub menu
 ```
-sudo grub-mkconfig | grep -iE "menuentry 'Ubuntu, with Linux" | awk '{print i++ " : "$1, $2, $3, $4, $5, $6, $7}'
+sudo grub-mkconfig | \
+     grep -iE "menuentry 'Ubuntu, with Linux" | \
+     awk '{print i++ " : "$1, $2, $3, $4, $5, $6, $7}'
 ```
 - update /etc/default/grub file (suppose want to set 4th boot entry as default option)
 ```
